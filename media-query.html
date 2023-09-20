@@ -1,0 +1,145 @@
+
+<!--◉ Media Queries:
+    Ito ay nagbibigay-daan sa iyo na gawing maayos ang iyong web page sa iba't ibang mga (mobile devices, tablet, desktop computers), at iba pang mga platform. Sa pamamagitan ng paggamit ng media queries, maaari mong i-adjust ang estilo ng isang web page depende sa laki ng screen, orientation (portrait o landscape), resolution, at iba pang mga katangian ng device. 
+
+    Using media queries are a popular technique for delivering a tailored style sheet to desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones).
+
+        Syntax :
+            👉@media screen and (media feature) {
+                CSS-Style U want  to change;
+                }
+
+        Practical example with (2 expresssion):
+            👉@media screen and (min-width: 320px) and (max-width: 767px){
+                CSS-Style U want to change;
+            }
+        
+
+ 🗝️ NOTE :You can also have different stylesheets for different media: mas mabuti kung meron kang separate na css kapag gagamit ka ng (media query ) halimbawa katulad ng responsive design para sa ibat ibang screen size tulad mobile phone, tablet para mas malinis tignan ang code mo. the i access mo nlng ito gamit ang link tag sa html head.
+
+    <link rel="stylesheet" media="screen and (media feature)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (media feature) and (media feature2)" href="tablet.css">
+
+◉ Media types: 
+    The media type is the target of your media query.
+
+    • all: all devices
+    • print: print preview
+    • screen: devices with a screen
+    • speech: devices that read the content audibly
+
+◉ Media feature :
+    The media feature is the condition.
+
+    • Width: min-width or max-width
+    • Orientation: portrait or landscape.
+
+◉ Operator
+    You need an operator if you want multiple media features.
+
+    • and: combine 2 media features ( and )
+    • or: choose 1 of the 2 media features ( , )
+    • not: reverse the entire media query ( not )
+
+
+****************************************************************************************
+👉 Media Queries and Responsive Web Design
+
+Example :
+
+/* Smartphones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 767px){
+
+    CSS-Style U want to change; 
+}
+
+
+/* Tablets, iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+    CSS-Style U want to change;
+}
+
+
+/* Desktops and laptops ---------- */
+@media screen and (min-width: 1024px) and (max-width: 1224px){
+    
+    CSS-Style U want to change;
+}
+
+
+/* Large screens ---------- */
+@media screen and (min-width: 1225){
+    
+    CSS-Style U want to change;
+}
+
+👉 Tip: Media queries are an excellent way to create responsive layouts. Using media queries you can customize your website differently for users browsing on devices like smart phones or tablets without changing the actual content of the page.
+
+ 🗝️ Mga pwd isama sa pagbabago sa ibat ibang devices :
+background color,font-family,font-size , template lay-out, picture lay-out, color of text,
+halos lahat ng nasa loob ng isang web page.
+****************************************************************************************
+👉 👈
+→ 
+◉ 
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="stylesheet" href="media-query.css">
+        <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="tablet.css">
+        <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 767px)" href="mobile.css">
+
+        <title>Media Queries</title>
+    </head>
+
+    <body>
+        <div id="main-container">
+            <div id="header">
+                <p class="sign">Header</p>
+                <h1>My 1st Website</h1>
+                <p>With a <b>Responsive</b> layout.</p>
+            </div>
+
+            <div id="nav">
+                <!-- <p class="sign">Nav-bar</p> -->
+                <a class="active" href="https://youtu.be/YObKgb18mbU" target="_self">Home</a>
+                <a class="about" href="#">About</a>
+                <a class="contact" href="#">Contact</a>
+                <a class="sign-up" href="#">Sign-up</a>
+            </div>
+
+            <div id="side-bar">
+
+                <p class="sign">Side-bar</p>
+
+                
+            </div>
+
+            <div id="main">
+                
+                <p class="sign">Main</p>
+
+            </div>
+
+            <div class="content1">
+                <p class="sign">Content1</p></div>
+            <div class="content2">
+                <p class="sign">Content2</p></div>
+            <div class="content3">
+                <p class="sign">Content3</p></div>
+
+            <div id="footer">
+                <p class="sign">Footer</p>
+            </div>
+        </div>
+       
+    </body>
+
+</html>
