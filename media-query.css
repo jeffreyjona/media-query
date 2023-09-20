@@ -57,7 +57,7 @@ div#main-container{
 }
 
 #nav{
-    background-color:darkslategray;
+    background-color:red;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
